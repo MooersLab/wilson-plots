@@ -12,7 +12,7 @@ Below is an example of my homemade Wilson plot for a data set where the high-res
 
 <p align="center"><img src="images/3173d-wilson.png" style="width: 90vw; min-width: 330px;"></p>
 
-Note that the outlier does not stand out in the snapshot of the Wilson plot made by loggraph, which averages points rather than plotting all of them.
+Note that the outlier does not stand out as well in the snapshot of the Wilson plot made by loggraph.
 
 <p align="center"><img src="images/loggraph.png" style="width: 90vw; min-width: 330px;"></p>
 
