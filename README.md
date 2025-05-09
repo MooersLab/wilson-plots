@@ -25,9 +25,8 @@ This creates a linear relationship where:
 - The slope equals -2B (allowing B-factor determination)
 - The y-intercept provides the scale factor
 
-
-It used to estimate the overall isotropic temperature factor for a crystal structure.
-Aberations in the plot can be used to detect problems in the data like radiation damage or anisotropy or no more signal.
+The plot estimates the overall isotropic temperature factor for a crystal structure.
+Aberations in the plot can be used to detect problems in the data, like radiation damage, anisotropy, or no more signal.
 Bulk solvent effects in crystals of biomolecules cause deviations from linearity.
 Spikes in the plot are due to ice rings.
 Deviations at high resolution can indicate radiation damage or anisotropy.
@@ -36,10 +35,10 @@ Overall linearity may indicate twinning, modulation, or other issues.
 ## The problem and the solution
 
 If you are a protein crystallographer, you probably saw the recent post on CCP4bb about how we should be looking at Wilson plots before we fret about the $I/{\sigma}$ in the high-resolution shell.
-This is excellent advice, but viewing the Wilson plot can be a pain when you are processing dozens of diffraction data sets after a bout of data collection with synchrotron radiation.
+This is excellent advice, but viewing the Wilson plot can be a pain when processing dozens of diffraction data sets after a bout of data collection with synchrotron radiation.
 
-Below is an example of my homemade Wilson plot made with a Python script and the CCP4 truncate log file.
-It is easily invoked with a bash function given below.
+Below is an example of my homemade Wilson plot with a Python script and the CCP4 truncate log file.
+It is easily invoked with a bash function, as given below.
 The plot is of a data set where the high-resolution limit should be truncated, even though the $I/{\sigma}$ was 1.5 in the highest-resolution shell.
 
 <p align="center"><img src="images/3173d-wilson.png" style="width: 90vw; min-width: 330px;"></p>
