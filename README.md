@@ -17,7 +17,7 @@ Where:
 
 - k is a scale factor
 - B is the overall temperature factor (B-factor)
-= sin²θ/λ² equals 1/4d²
+- sin²θ/λ² equals 1/4d²
 
 This creates a linear relationship where:
 
