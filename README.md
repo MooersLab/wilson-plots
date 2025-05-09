@@ -6,7 +6,25 @@
 
 A.J.C. Wilson in 1949 developed a plot for analyzing X-ray diffraction data from crystals. 
 The plot displays the natural logarithm of the average intensity of reflections (ln⟨I⟩) against the square of the reciprocal resolution (1/d²).
-'d' is the Miller plane spacing in Angstroms.
+`d` is the Miller plane spacing in Angstroms.
+
+Wilson's key insight was that for a random distribution of atoms, the relationship between average intensity and resolution follows:
+
+
+$$\ln \left(\langle I) /\left(\Sigma f^2\right\rangle\right)=\ln (k)-2 B\left(\sin ^2 \theta / \lambda^2\right)$$
+
+Where:
+
+- k is a scale factor
+- B is the overall temperature factor (B-factor)
+= sin²θ/λ² equals 1/4d²
+
+This creates a linear relationship where:
+
+- The slope equals -2B (allowing B-factor determination)
+- The y-intercept provides the scale factor
+
+
 It used to estimate the overall isotropic temperature factor for a crystal structure.
 Aberations in the plot can be used to detect problems in the data like radiation damage or anisotropy or no more signal.
 Bulk solvent effects in crystals of biomolecules cause deviations from linearity.
@@ -18,7 +36,7 @@ Overall linearity may indicate twinning, modulation, or other issues.
 You probably saw that post on CCP4bb about how we should be looking at Wilson plots before we fret about the $I/{\sigma}$ in the high-resolution shell.
 This is excellent advice, but the problem has been that gaining access to the Wilson plot is a pain.
 
-Below is an example of my homemade Wilson plot made with a Python script and the truncate log file.
+Below is an example of my homemade Wilson plot made with a Python script and the CCP4 truncate log file.
 The plot is of a data set where the high-resolution limit should be truncated, even though the $I/{\sigma}$ was 1.5 in the highest-resolution shell.
 
 <p align="center"><img src="images/3173d-wilson.png" style="width: 90vw; min-width: 330px;"></p>
@@ -66,7 +84,8 @@ This is the customized bash function for SMB server at SSRL.
 It uses Python2 from inside cctbx, which has the required dependencies.
 You have to enter 'bash' to switch from tcsh.
 Then you source your ~/.bashFunctions file to load the bash functions: `source .bashFunctions`.
-Now, you can enter `wilson <filestem> <run number>` from anywhere.
+Now, you can enter `wilson <filestem> <run number>` from the folder containing the image files.
+On the SMB server, the plot opens in Gimp.
 
 
 ```bash
