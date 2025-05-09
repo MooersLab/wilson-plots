@@ -2,17 +2,28 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 
-# wilson-plots
+# Wilson plots
 
-You probably saw that post on ccp4bb about how we should be looking at Wilson plots before we fret about the $I/{\sigma}$ in the high-resolution shell.
- This is excellent advice, but the problem has been that gaining access to the Wilson plot is a pain.
- 
- 
-Below is an example of my homemade Wilson plot for a data set where the high-resolution limit should be truncated even though the $I/{\sigma}$ was 1.5 in the highest-resolution shell.
+A.J.C. Wilson in 1949 developed a plot for analyzing X-ray diffraction data from crystals. 
+The plot displays the natural logarithm of the average intensity of reflections (ln⟨I⟩) against the square of the reciprocal resolution (1/d²).
+'d' is the Miller plane spacing in Angstroms.
+It used to estimate the overall isotropic temperature factor for a crystal structure.
+Aberations in the plot can be used to detect problems in the data like radiation damage or anisotropy or no more signal.
+Bulk solvent effects in crystals of biomolecules cause deviations from linearity.
+Spikes in the plot are due to ice rings.
+Deviations at high resolution can indicate radiation damage or anisotropy.
+Overall linearity may indicate twinning, modulation, or other issues.
+
+
+You probably saw that post on CCP4bb about how we should be looking at Wilson plots before we fret about the $I/{\sigma}$ in the high-resolution shell.
+This is excellent advice, but the problem has been that gaining access to the Wilson plot is a pain.
+
+Below is an example of my homemade Wilson plot made with a Python script and the truncate log file.
+The plot is of a data set where the high-resolution limit should be truncated, even though the $I/{\sigma}$ was 1.5 in the highest-resolution shell.
 
 <p align="center"><img src="images/3173d-wilson.png" style="width: 90vw; min-width: 330px;"></p>
 
-Note that the outlier does not stand out as well in the snapshot of the Wilson plot made by loggraph.
+Note that the outlier does not stand out in the snapshot of the Wilson plot made by loggraph.
 
 <p align="center"><img src="images/loggraph.png" style="width: 90vw; min-width: 330px;"></p>
 
