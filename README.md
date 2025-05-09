@@ -27,8 +27,8 @@ This creates a linear relationship where:
 
 The plot estimates the overall isotropic temperature factor for a crystal structure.
 Aberations in the plot can be used to detect problems in the data, like radiation damage, anisotropy, or no more signal.
-Bulk solvent effects in crystals of biomolecules cause deviations from linearity.
-Spikes in the plot are due to ice rings.
+Bulk solvent effects in crystals of biomolecules cause deviations from linearity at around 5.5 Angstroms.
+Spikes in the plot may be due to ice rings.
 Deviations at high resolution can indicate radiation damage or anisotropy.
 Overall linearity may indicate twinning, modulation, or other issues.
 
