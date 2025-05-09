@@ -94,7 +94,7 @@ On the SMB server, the plot opens in Gimp.
 function wilson {
 echo "This script calls wilsonplot.py to generate a Wilson plot using the data in the truncate.log file."
 echo "It assumes that the output files are stored by run number following the convention used by autoxds."
-echo "It has to be evoked from the directory with the images."
+echo "It has to be invoked from the directory with the images."
 echo "This script takes the file stem of an image filename and the run number as two arguments in that order."
 echo "This is faster than navigating to the folder and searching the log file for the summary table with vim."
 if [ $# -lt 2 ]; then
