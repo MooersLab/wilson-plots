@@ -63,8 +63,8 @@ On your Mac, you can use a bash function that takes two arguments: the image fil
 wilson () {
 echo "This script calls wilsonplot.py to generate a Wilson Plot using the data in the truncate.log file."
 echo "It assumes that the output files are stored by run number following the convention used by autoxds."
-echo "This function has to be evoked from the directory with the images."
-echo "This script takes the file stem of a image filename and the run number as two arguments in that order."
+echo "This function has to be invoked from the directory with the images."
+echo "This script takes the file stem of an image filename and the run number as two arguments in that order."
 echo "This is faster than navigating to the folder and searching the log file for the summary table with vim."
 if [ $# -lt 2 ]; then
    echo 1>&2 "$0: not enough arguments"
