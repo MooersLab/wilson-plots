@@ -90,9 +90,9 @@ cctbx.python ~/scripts/wilsonplot2.py ./$1_$2_xds/$1_$2_truncate.log $1_$2-wilso
 ```
 
 
-|Version      | Changes                                                                                                                                                     Date          |
-|:-----------|:------------------------------------------------------------------------------------------------------------------------------------------|:--------------------|
-| Version 0.1 |   Added badges, funding, and update table.  Initial commit.                                                                   | 5/9/2025  |
+|Version      | Changes                                                                                                 |        Date          |
+|:-----------|:---------------------------------------------------------------------------------------------------------|:--------------------|
+| Version 0.1 |   Added badges, funding, and update table.  Initial commit.                                              | 5/9/2025  |
 
 ## Sources of funding
 
