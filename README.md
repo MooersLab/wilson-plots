@@ -5,13 +5,16 @@
 # wilson-plots
 
 You probably saw that post on ccp4bb about how we should be looking at Wilson plots before we fret about the $I/{\sigma}$ in the high-resolution shell.
- I think this is excellent advice, but the problem has been that gaining access to the Wilson plot is a pain.
+ This is excellent advice, but the problem has been that gaining access to the Wilson plot is a pain.
  
  
-Attached is an example of my homemade Wilson plot for a data set where the high-resolution limit should be truncated even though the $I/{\sigma}$ was 1.5 in the highest-resolution shell.
-Note that the outlier does not stand out in the snapshot of the Wilson plot made by loggraph, which seems to be averaging points rather than plotting all of them.
+Below is an example of my homemade Wilson plot for a data set where the high-resolution limit should be truncated even though the $I/{\sigma}$ was 1.5 in the highest-resolution shell.
 
+<p align="center"><img src="images/3173d-wilson.png" style="width: 90vw; min-width: 330px;"></p>
 
+Note that the outlier does not stand out in the snapshot of the Wilson plot made by loggraph, which averages points rather than plotting all of them.
+
+<p align="center"><img src="images/loggraph.png" style="width: 90vw; min-width: 330px;"></p>
 
 
 
@@ -23,7 +26,7 @@ The Python script is called wilsonplot3.py (uses Python3).
 python3 ./wilsonplot3.py ./3173d_1_xds/3173d_1_truncate.log 3173d-wilson.png && preview 3173d-wilson.png
 ```
 
-On your Mac, you can use a bash function that just takes the image file stem and the run number (e.g. wilson 3091 1): 
+On your Mac, you can use a bash function that takes two arguments: the image file stem and the run number (e.g. wilson 3091 1). 
 
 ```bash
 wilson () {
@@ -49,12 +52,10 @@ python ~/Scripts/SMBscripts/wilsonplot.py ./$1_$2_xds/$1_$2_truncate.log $1_$2-W
 ## Python2 version
 
 This is the customized bash function for SMB server at SSRL.
-It uses Python2.
+It uses Python2 from inside cctbx, which has the required dependencies.
 You have to enter 'bash' to switch from tcsh.
-Then you source your .bashFunctions file to load the bash functions.
-Now can enter wilson <filestem> <run number> from anywhere.
-
-
+Then you source your ~/.bashFunctions file to load the bash functions: `source .bashFunctions`.
+Now, you can enter `wilson <filestem> <run number>` from anywhere.
 
 
 ```bash
