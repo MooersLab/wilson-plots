@@ -4,6 +4,7 @@
 
 # Wilson plots
 
+## Background
 A.J.C. Wilson in 1949 developed a plot for analyzing X-ray diffraction data from crystals. 
 The plot displays the natural logarithm of the average intensity of reflections (ln⟨I⟩) against the square of the reciprocal resolution (1/d²).
 `d` is the Miller plane spacing in Angstroms.
@@ -32,11 +33,13 @@ Spikes in the plot are due to ice rings.
 Deviations at high resolution can indicate radiation damage or anisotropy.
 Overall linearity may indicate twinning, modulation, or other issues.
 
+## The problem and the solution
 
-You probably saw that post on CCP4bb about how we should be looking at Wilson plots before we fret about the $I/{\sigma}$ in the high-resolution shell.
-This is excellent advice, but the problem has been that gaining access to the Wilson plot is a pain.
+If you are a protein crystallographer, you probably saw the recent post on CCP4bb about how we should be looking at Wilson plots before we fret about the $I/{\sigma}$ in the high-resolution shell.
+This is excellent advice, but viewing the Wilson plot can be a pain when you are processing dozens of diffraction data sets after a bout of data collection with synchrotron radiation.
 
 Below is an example of my homemade Wilson plot made with a Python script and the CCP4 truncate log file.
+It is easily invoked with a bash function given below.
 The plot is of a data set where the high-resolution limit should be truncated, even though the $I/{\sigma}$ was 1.5 in the highest-resolution shell.
 
 <p align="center"><img src="images/3173d-wilson.png" style="width: 90vw; min-width: 330px;"></p>
@@ -107,6 +110,10 @@ fi
 cctbx.python ~/scripts/wilsonplot2.py ./$1_$2_xds/$1_$2_truncate.log $1_$2-wilsonplot.png && open $1_$2-wilsonplot.png
 }
 ```
+
+## AI disclosure: 
+
+Claude 3.7 Sonnet Thinking was used in many iterative cycles of code generation and testing.
 
 
 |Version      | Changes                                                                                                 |        Date          |
